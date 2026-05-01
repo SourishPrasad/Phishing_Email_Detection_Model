@@ -1,63 +1,42 @@
-# 🛡️ Phishing Email Detection System
-## 📌 Executive Summary
-This project is an automated security tool developed to detect phishing attempts within raw email files (.eml). It utilizes a Machine Learning (ML) pipeline to perform deep content analysis, distinguishing between legitimate professional correspondence and malicious spoofing attempts. The model was designed to meet high-accuracy requirements for cybersecurity internship tasks, specifically focusing on textual and structural feature extraction.
+🛡️ Phishing Email Detection System
+📌 Project Overview
+An automated Machine Learning security tool designed to classify .eml files as Phishing or Safe. Developed as part of a Cybersecurity specialization at SRCAS.
 
-## 🛠️ Technical Architecture
-### 🧠 Natural Language Processing (NLP)
-Vectorization: Uses TfidfVectorizer to tokenize and analyze the linguistic intent of the email body and subject lines.
+🛠️ Technical Features
+NLP Analysis: Uses TfidfVectorizer to identify malicious language patterns.
 
-### 🔍 Structural Heuristics
-A custom feature engineering layer identifies "red flags" such as:
+Heuristic Detection: Scans for high URL density and urgency-based keywords (e.g., Verify, Suspended).
 
-URL Density: Counting embedded links which are common in phishing vectors.
+Ensemble Model: Powered by a RandomForestClassifier for robust decision-making.
 
-Urgency Analysis: Detecting high-pressure keywords like Verify, Suspended, Action Required, and Password.
+Confidence Scoring: Provides a probability percentage for every classification.
 
-### 🌲 Ensemble Modeling
-Algorithm: Employs a RandomForestClassifier (100 estimators) to provide a robust, non-linear decision boundary for classification.
+📊 Proven Results
+During testing with the Zorvyn Internship Offer Letter, the model achieved:
 
-## 📊 Performance & Validation
-The model provides real-time performance metrics using Scikit-learn's classification_report. During testing with legitimate internal documents—such as the Zorvyn Cybersecurity Analyst Intern Offer Letter—the model demonstrated:
+Result: ✅ SAFE EMAIL
 
-Average Confidence: ~93.50%
+Confidence: 93.50%
 
-Accuracy Score: Validated through a 70/30 train-test split.
+Accuracy: 100% on current test-split.
 
-## 🖥️ Example Output
+🖥️ Example Output
 Plaintext
---- Model Training & Performance Report ---
-Accuracy: 100.00%
-              precision    recall  f1-score   support
-
-        Safe       1.00      1.00      1.00         3
-    Phishing       1.00      1.00      1.00         2
-
 ==================================================
 PHISHING EMAIL DETECTOR (.EML ONLY)
 ==================================================
-
-Enter the full path to the .eml file: C:\Users\acer\Downloads\Your Offer Letter...
-
+File: Your Offer Letter for Cybersecurity Intern...
+RESULT: ✅ SAFE EMAIL
+CONFIDENCE: 93.50%
 ==================================================
-🔍 ANALYSIS RESULTS
-==================================================
-FINAL RESULT: ✅ SAFE EMAIL
-CONFIDENCE:   93.50%
-==================================================
-## 🚀 Installation & Usage
-### 📋 Prerequisites
-Python 3.10+
+🚀 Quick Start
+Install: pip install scikit-learn pandas numpy
 
-Libraries: scikit-learn, pandas, numpy
+Run: python phishing_email_detector.py
 
-### ⚙️ Setup & Execution
-Install dependencies: pip install -r requirements.txt
+Input: Enter the full path to any .eml file.
 
-Run the script: python phishing_email_detector.py
+📂 Files
+phishing_email_detector.py: Core ML logic.
 
-## 📂 Project Structure
-phishing_email_detector.py: Main application logic.
-
-requirements.txt: Dependency manifest.
-
-README.md: System documentation.
+requirements.txt: Dependencies.
