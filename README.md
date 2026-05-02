@@ -3,8 +3,7 @@
 ## 📌 Project Overview
 
 An automated Machine Learning–based cybersecurity tool that classifies `.eml` email files as **Phishing** or **Safe**.
-Developed as part of a Cybersecurity specialization at **SRCAS**, this project combines NLP, heuristic analysis, and ensemble learning to detect suspicious email patterns with confidence scoring.
-
+This project is an automated security tool developed to detect phishing attempts within raw email files (.eml). It utilizes a Machine Learning (ML) pipeline to perform deep content analysis, distinguishing between legitimate professional correspondence and malicious spoofing attempts. The model was designed to meet high-accuracy requirements for cybersecurity internship tasks, specifically focusing on textual and structural feature extraction.
 ---
 
 ## 🛠️ Technical Features
