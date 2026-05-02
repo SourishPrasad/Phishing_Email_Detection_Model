@@ -1,4 +1,4 @@
-🛡️ Phishing Email Detection System
+## 🛡️ Phishing Email Detection System
 📌 Project Overview
 An automated Machine Learning security tool designed to classify .eml files as Phishing or Safe. Developed as part of a Cybersecurity specialization at SRCAS.
 
